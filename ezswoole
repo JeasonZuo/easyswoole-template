@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+PHP_CONTAINER="$(docker ps -q -f NAME=jeason_easyswoole)"
+docker exec -t $PHP_CONTAINER bash -c "cd /src-easyswoole/ & php easyswoole $*"
